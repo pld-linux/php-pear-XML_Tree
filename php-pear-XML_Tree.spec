@@ -13,7 +13,7 @@ License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 # Source0-md5:	81fa9feee6adfab953728b7d67885899
-URL:		http://pear.php.net/package/%{_pearname}/
+URL:		http://pear.php.net/package/XML_Tree/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
 BuildArch:	noarch
