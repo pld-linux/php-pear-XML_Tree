@@ -1,17 +1,18 @@
 %include	/usr/lib/rpm/macros.php
 %define         _class          XML
 %define         _subclass       Tree
-%define		_status		stable
+%define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
+%define		_rc		b1
 Summary:	%{_pearname} - Represent XML data in a tree structure
 Summary(pl):	%{_pearname} - Prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
-Version:	1.1
-Release:	1
+Version:	2.0
+Release:	0.%{_rc}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	372f7655df0d34e9f1a82d45c10931f6
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
+# Source0-md5:	8d12a815f2ee78e82557bcc7feebe9e8
 URL:		http://pear.php.net/package/%{_pearname}/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
@@ -37,14 +38,15 @@ Ta klasa ma w PEAR status: %{_status}.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{,%{_subclass}}
 
-install %{_pearname}-%{version}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install %{_pearname}-%{version}%{_rc}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
+install %{_pearname}-%{version}%{_rc}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc %{_pearname}-%{version}%{_rc}/{tests,README.txt}
 %dir %{php_pear_dir}/%{_class}/%{_subclass}
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}/*.php
