@@ -24,7 +24,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Allows for the building of XML data structures using a tree
 representation, without the need for an extension like DOMXML.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 Klasa ta pozwala na budowanie struktur danych XML przy u¿yciu
