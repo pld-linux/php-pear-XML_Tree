@@ -1,11 +1,12 @@
 %include	/usr/lib/rpm/macros.php
-%define         _class          XML
-%define         _subclass       Tree
+%define		_class		XML
+%define		_subclass	Tree
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 %define		_rc		b2
-Summary:	%{_pearname} - Represent XML data in a tree structure
-Summary(pl):	%{_pearname} - Prezentacja danych XML w postaci drzewa
+
+Summary:	%{_pearname} - represent XML data in a tree structure
+Summary(pl):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
 Version:	2.0
 Release:	0.%{_rc}
