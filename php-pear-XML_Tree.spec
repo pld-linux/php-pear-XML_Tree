@@ -23,6 +23,12 @@ representation, without the need for an extension like DOMXML.
 
 This class has in PEAR status: %{_status}.
 
+%description -l pl
+Klasa ta pozwala na budowanie struktur danych XML przy u¿yciu
+reprezentacji drzewiastej, bez potrzeby rozszerzeñ typu DOMXML.
+
+Ta klasa ma w PEAR status: %{_status}.
+
 %prep
 %setup -q -c
 
