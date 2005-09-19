@@ -9,13 +9,14 @@ Summary:	%{_pearname} - represent XML data in a tree structure
 Summary(pl):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-Release:	0.%{_rc}.1
+%define	_rel 1.2
+Release:	0.%{_rc}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 # Source0-md5:	b492d88ce17ae329cdb7e9cc9ff51622
 URL:		http://pear.php.net/package/XML_Tree/
-BuildRequires:	rpm-php-pearprov >= 4.0.2-98
+BuildRequires:	rpm-php-pearprov >= 4.4.2-10.2
 Requires:	php-pear
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -33,20 +34,23 @@ reprezentacji drzewiastej, bez potrzeby rozszerzeñ typu DOMXML.
 Ta klasa ma w PEAR status: %{_status}.
 
 %prep
-%setup -q -c
+%pear_package_setup
+# probably wrongly packaged
+mv ./%{php_pear_dir}/data/%{_pearname}/README.txt docs
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/{,%{_subclass}}
-
-install %{_pearname}-%{version}%{_rc}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}
-install %{_pearname}-%{version}%{_rc}/%{_subclass}/*.php $RPM_BUILD_ROOT%{php_pear_dir}/%{_class}/%{_subclass}
+install -d $RPM_BUILD_ROOT%{php_pear_dir}
+%pear_package_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc %{_pearname}-%{version}%{_rc}/{docs,README.txt}
+%doc install.log
+%doc docs/%{_pearname}/docs/*
+%doc docs/README.txt
+%{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/%{_class}/*.php
 %{php_pear_dir}/%{_class}/%{_subclass}
