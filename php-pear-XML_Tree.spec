@@ -9,7 +9,7 @@ Summary(pl):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 %define		_rc		RC2
-%define	_rel 1.3
+%define	_rel 2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
