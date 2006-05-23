@@ -18,6 +18,7 @@ Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
 URL:		http://pear.php.net/package/XML_Tree/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-common >= 3:4.0.4
 Requires:	php-pcre
 Requires:	php-pear
