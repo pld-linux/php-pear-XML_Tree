@@ -4,12 +4,12 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
+%define		_rc		RC2
+%define		_rel 3
 Summary:	%{_pearname} - represent XML data in a tree structure
 Summary(pl):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
-%define		_rc		RC2
-%define	_rel 2
 Release:	0.%{_rc}.%{_rel}
 License:	PHP 2.02
 Group:		Development/Languages/PHP
@@ -19,11 +19,13 @@ URL:		http://pear.php.net/package/XML_Tree/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php(pcre)
+Requires:	php(pcre)
+Requires:	php(xml)
 Requires:	php-common >= 3:4.0.4
-Requires:	php-pcre
 Requires:	php-pear
 Requires:	php-pear-XML_Parser >= 1.1.0
-Requires:	php-xml
+Requires:	webserver(php) >= 4.0.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
