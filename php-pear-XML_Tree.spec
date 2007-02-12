@@ -7,7 +7,7 @@
 %define		_rc		RC2
 %define		_rel 3
 Summary:	%{_pearname} - represent XML data in a tree structure
-Summary(pl.UTF-8):   %{_pearname} - prezentacja danych XML w postaci drzewa
+Summary(pl.UTF-8):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
 Version:	2.0.0
 Release:	0.%{_rc}.%{_rel}
