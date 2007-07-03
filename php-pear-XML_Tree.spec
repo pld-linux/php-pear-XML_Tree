@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define		_rc		RC2
-%define		_rel 3
+%define		_rel 4
 Summary:	%{_pearname} - represent XML data in a tree structure
 Summary(pl.UTF-8):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
@@ -20,12 +20,10 @@ BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php(pcre)
-Requires:	php(pcre)
 Requires:	php(xml)
 Requires:	php-common >= 3:4.0.4
 Requires:	php-pear
 Requires:	php-pear-XML_Parser >= 1.1.0
-Requires:	webserver(php) >= 4.0.4
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,6 +32,9 @@ Allows for the building of XML data structures using a tree
 representation, without the need for an extension like DOMXML.
 
 In PEAR status of this package is: %{_status}.
+
+NOTE: This package is not maintained anymore and has been superseded. Use
+XML_Serializer instead.
 
 %description -l pl.UTF-8
 Klasa ta pozwala na budowanie struktur danych XML przy użyciu
