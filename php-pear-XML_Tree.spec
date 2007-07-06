@@ -33,14 +33,17 @@ representation, without the need for an extension like DOMXML.
 
 In PEAR status of this package is: %{_status}.
 
-NOTE: This package is not maintained anymore and has been superseded. Use
-XML_Serializer instead.
+NOTE: This package is not maintained anymore and has been superseded.
+Use XML_Serializer instead.
 
 %description -l pl.UTF-8
 Klasa ta pozwala na budowanie struktur danych XML przy użyciu
 reprezentacji drzewiastej, bez potrzeby rozszerzeń typu DOMXML.
 
 Ta klasa ma w PEAR status: %{_status}.
+
+UWAGA: ten pakiet nie jest już utrzymywany, został zastąpiony pakietem
+XML_Serializer.
 
 %prep
 %pear_package_setup
