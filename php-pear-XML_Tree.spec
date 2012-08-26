@@ -3,7 +3,7 @@
 %define		_status		beta
 %define		_pearname	XML_Tree
 %define		subver	RC3
-%define		rel 	3
+%define		rel 	4
 %include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - represent XML data in a tree structure
 Summary(pl.UTF-8):	%{_pearname} - prezentacja danych XML w postaci drzewa
@@ -18,9 +18,9 @@ URL:		http://pear.php.net/package/XML_Tree/
 BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.300
+Requires:	php(core) >= 4.0.4
 Requires:	php(pcre)
 Requires:	php(xml)
-Requires:	php-common >= 3:4.0.4
 Requires:	php-pear
 Requires:	php-pear-PEAR-core >= 1:1.4.0-0.b1
 Requires:	php-pear-XML_Parser >= 1.1.0
