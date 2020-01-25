@@ -4,7 +4,6 @@
 %define		_pearname	XML_Tree
 %define		subver	RC3
 %define		rel 	4
-%include	/usr/lib/rpm/macros.php
 Summary:	%{_pearname} - represent XML data in a tree structure
 Summary(pl.UTF-8):	%{_pearname} - prezentacja danych XML w postaci drzewa
 Name:		php-pear-%{_pearname}
